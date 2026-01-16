@@ -1,0 +1,80 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+
+# Cache directories
+.cache/
+.turbo/
+.parcel-cache/
+.vite/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Hardhat
+packages/contracts/cache/
+packages/contracts/artifacts/
+packages/contracts/typechain-types/
+packages/contracts/coverage/
+packages/contracts/coverage.json
+
+# Deployments (zawiera adresy kontraktów - commituj selective)
+packages/contracts/deployments/*.json
+!packages/contracts/deployments/.gitkeep
+# Ignore deployment/test scripts
+packages/contracts/scripts/
+
+# Test outputs
+coverage/
+.nyc_output/
+test-results/
+
+# Logs
+logs/
+*.log
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+.temp/
+.tmp/
+
+# Frontend specific
+packages/frontend/.vite/
+packages/frontend/dist/
+
+# Contract ABIs (generated)
+packages/frontend/src/contracts/abis/
+
+# Misc
+*.pid
+*.seed
+*.pid.lock

@@ -1,0 +1,22 @@
+{
+  "name": "chainquest-platform",
+  "version": "1.0.0",
+  "description": "Decentralized Smart Contract Learning Platform",
+  "author": "ChainQuest Team",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "contracts:compile": "cd packages/contracts && npx hardhat compile",
+    "contracts:test": "cd packages/contracts && npx hardhat test",
+    "contracts:deploy": "cd packages/contracts && npx hardhat run scripts/deploy.js",
+    "frontend:dev": "cd packages/frontend && npm run dev",
+    "frontend:build": "cd packages/frontend && npm run build",
+    "dev": "npm run frontend:dev"
+  },
+  "devDependencies": {
+    "prettier": "^3.1.0"
+  }
+}
