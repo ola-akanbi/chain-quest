@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0f172a;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Code editor styles */
+.monaco-editor {
+  border-radius: 8px;
+}
+
+/* Animations */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(
+    to right,
+    #1e293b 0%,
+    #334155 50%,
+    #1e293b 100%
+  );
+  background-size: 1000px 100%;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass morphism */
+.glass {
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Button styles */
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+  @apply hover:scale-105 active:scale-95;
+}
+
+.btn-primary {
+  @apply bg-primary-500 hover:bg-primary-600 text-white;
+}
+
+.btn-secondary {
+  @apply bg-dark-700 hover:bg-dark-600 text-white;
+}
+
+.btn-ghost {
+  @apply hover:bg-dark-800 text-gray-300;
+}
+
+/* Card styles */
+.card {
+  @apply bg-dark-800 rounded-xl border border-dark-700 p-6;
+  @apply hover:border-dark-600 transition-colors;
+}
+
+.card-interactive {
+  @apply card cursor-pointer hover:shadow-xl hover:scale-[1.02];
+  @apply transition-all duration-200;
+}
+
+/* Badge styles */
+.badge {
+  @apply px-3 py-1 rounded-full text-xs font-semibold;
+}
+
+/* Level badge */
+.level-badge {
+  @apply inline-flex items-center justify-center;
+  @apply w-10 h-10 rounded-full;
+  @apply bg-gradient-to-br from-primary-500 to-purple-600;
+  @apply text-white font-bold;
+  @apply shadow-lg;
+}
+
+/* Loading skeleton */
+.skeleton {
+  @apply animate-shimmer bg-dark-700 rounded;
+}
+
+/* Toast overrides */
+.toast-custom {
+  @apply glass rounded-lg p-4;
+}
+
+/* Difficulty badges */
+.difficulty-beginner {
+  @apply bg-green-500/20 text-green-400 border border-green-500/50;
+}
+
+.difficulty-easy {
+  @apply bg-blue-500/20 text-blue-400 border border-blue-500/50;
+}
+
+.difficulty-medium {
+  @apply bg-yellow-500/20 text-yellow-400 border border-yellow-500/50;
+}
+
+.difficulty-hard {
+  @apply bg-orange-500/20 text-orange-400 border border-orange-500/50;
+}
+
+.difficulty-expert {
+  @apply bg-red-500/20 text-red-400 border border-red-500/50;
+}
+
+/* Progress bar */
+.progress-bar {
+  @apply w-full h-2 bg-dark-700 rounded-full overflow-hidden;
+}
+
+.progress-bar-fill {
+  @apply h-full bg-gradient-to-r from-primary-500 to-purple-600;
+  @apply transition-all duration-500 ease-out;
+}
